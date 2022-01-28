@@ -5,21 +5,21 @@
 	<key>AppId</key>
 	<string>415789243347763</string>
 	<key>Study Title</key>
-	<string>CardinalKit</string>
+	<string>mCHOIR</string>
 	<key>Team Name</key>
-	<string>Stanford Byers Center for Biodesign</string>
+	<string>CHOIR</string>
 	<key>Email</key>
-	<string>contact@domain.com</string>
+	<string>hayden16@stanford.edu</string>
 	<key>Phone</key>
-	<string>123-456-7890</string>
+	<string>650-468-1095</string>
 	<key>Copyright</key>
 	<string>Made at Stanford with ❤️</string>
 	<key>Website</key>
-	<string>https://cardinalkit.org</string>
+	<string>https://choir.stanford.edu/</string>
 	<key>Tint Color</key>
 	<string>#b6133f</string>
 	<key>Primary Color</key>
-	<string>#ff3961</string>
+	<string>#8C1515</string>
 	<key>Review Consent Step Text</key>
 	<string>Review Consent Form</string>
 	<key>Reason for Consent Text</key>
@@ -33,7 +33,7 @@
 	<key>Completion Step Title</key>
 	<string>Welcome aboard.</string>
 	<key>Completion Step Text</key>
-	<string>This step concludes the onboarding and consent process of the CardinalKit framework. Next up, you will see main app functionality.</string>
+	<string>Thank you for completing the onboarding process!</string>
 	<key>Failed Login Title</key>
 	<string>Unable to Login 😔</string>
 	<key>Failed Login Text</key>
@@ -109,9 +109,9 @@
 		<key>Overview</key>
 		<dict>
 			<key>Title</key>
-			<string>Hi there! 👋🏽</string>
+			<string>Welcome to mCHOIR!</string>
 			<key>Summary</key>
-			<string>CardinalKit is a suite of tools designed to help you build a digital health app experience from the ground up. It integrates with Firebase to provide full-stack solutions. We hope you enjoy the love poured into this sample and make many great things with it!</string>
+			<string>mCHOIR uses both surveys and sensory information to allow health care providers a longitudinal perspective of a user&apos;s pain to provide better care. Researchers can use the information to model how pain changes throughout the day and develop new interventions.</string>
 			<key>Content</key>
 			<string>CardinalKit is a suite of tools designed to help you build a digital health app experience from the ground up. It integrates with Firebase to provide full-stack solutions. We hope you enjoy the love poured into this sample and make many great things with it!</string>
 		</dict>
@@ -120,7 +120,9 @@
 			<key>Title</key>
 			<string>Data Gathering</string>
 			<key>Summary</key>
-			<string>Here you should write a bit about what data you are collecting, and why.</string>
+			<string>CHOIR mobile collects data from two types of sources: 
+(1) surveys which ask a series of questions about pain experience and how it affects daily living.
+(2) sensory information from your apple watch, including heart rate, acceleration, and physical activity measurements such as step count.</string>
 			<key>Content</key>
 			<string>Here you should write a bit about what data you are collecting, and why. Additional content written here will show in final consent review form and generated PDF.</string>
 		</dict>
@@ -129,7 +131,7 @@
 			<key>Title</key>
 			<string>Privacy</string>
 			<key>Summary</key>
-			<string>What is your commitment in terms of data protection to your app participants? Who will have access to data?</string>
+			<string>We are committed to protecting the privacy of our users. All data is securely stored in Google’s cloud firebase storage, and linked to CHOIR “data-lake”, which is managed by Stanford Research IT. All data storage is HIPAA compliant. </string>
 			<key>Content</key>
 			<string>What is your commitment in terms of data protection to your app participants? Who will have access to data? Additional content written here will show in final consent review form and generated PDF.</string>
 		</dict>
@@ -138,7 +140,9 @@
 			<key>Title</key>
 			<string>Data Use</string>
 			<key>Summary</key>
-			<string>Information about your team&apos;s use of data.</string>
+			<string>The data collected will predominantly be used in two ways: 
+(1) to facilitate patient assessment, guide treatment decision making, and track longitudinal clinical outcomes
+ (2) as  an important set of markers/biomarkers for our research efforts to discover new mechanisms for pain and translate that information into safe, innovative, and effective therapies.</string>
 			<key>Content</key>
 			<string>Information about your team&apos;s use of data. Additional content.</string>
 		</dict>
@@ -147,7 +151,7 @@
 			<key>Title</key>
 			<string>Time Commitment</string>
 			<key>Summary</key>
-			<string>Information about the expected time commitment per app participant.</string>
+			<string>The only time commitment will be 2-3 minute surveys 3 times per day.</string>
 			<key>Content</key>
 			<string>Information about the expected time commitment per app participant. Additional content.</string>
 		</dict>
@@ -156,25 +160,16 @@
 			<key>Title</key>
 			<string>Study Survey</string>
 			<key>Summary</key>
-			<string>Information about any survey(s) in the app.</string>
+			<string>CHOIR mobile presents X surveys throughout the day with an estimated survey completion time of approximately 2-3 minutes. Surveys are designed to assess the user’s level, type, localization of pain along with a number of important pain-related factors and stressors. </string>
 			<key>Content</key>
 			<string>Information about any survey(s) in the app. Additional content.</string>
-		</dict>
-		<key>StudyTasks</key>
-		<dict>
-			<key>Title</key>
-			<string>Study Tasks</string>
-			<key>Summary</key>
-			<string>Information about any task(s) in the app.</string>
-			<key>Content</key>
-			<string>Information about any task(s) in the app. Additional content.</string>
 		</dict>
 		<key>Withdrawing</key>
 		<dict>
 			<key>Title</key>
 			<string>Withdrawing</string>
 			<key>Summary</key>
-			<string>What should your study participants know about the withdrawing process of your study?</string>
+			<string>Patients planning to withdraw can do so by reaching out to Dr. Sean Mackey at smackey@stanford.edu or pressing the unsubscribe button?  </string>
 			<key>Content</key>
 			<string>What should your study participants know about the withdrawing process of your study? Additional content.</string>
 		</dict>
