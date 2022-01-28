@@ -44,7 +44,7 @@ struct OnboardingUIView: View {
         VStack(spacing: 10) {
             Spacer()
             
-            Image("SBDLogoGrey")
+            Image("CHOIR_LOGO")
                 .resizable()
                 .scaledToFit()
                 .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN*4)
@@ -63,7 +63,7 @@ struct OnboardingUIView: View {
                 .padding(.leading, Metrics.PADDING_HORIZONTAL_MAIN)
                 .padding(.trailing, Metrics.PADDING_HORIZONTAL_MAIN)
 
-            PageView(self.onboardingElements.map { InfoView(logo: $0.logo, title: $0.title, description: $0.description, color: self.color) })
+           // PageView(self.onboardingElements.map { InfoView(logo: $0.logo, title: $0.title, description: $0.description, color: self.color) })
 
             Spacer()
             
