@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "CHOIR_LOGO.png",
+      "filename" : "pink_background.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CHOIR_LOGO-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CHOIR_LOGO-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

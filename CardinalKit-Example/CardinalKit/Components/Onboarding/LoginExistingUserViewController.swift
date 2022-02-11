@@ -32,8 +32,8 @@ struct LoginExistingUserViewController: UIViewControllerRepresentable {
         
         // set health data permissions
         let healthDataStep = CKHealthDataStep(identifier: "HealthKit")
-        let healthRecordsStep = CKHealthRecordsStep(identifier: "HealthRecords")
-        
+//        let healthRecordsStep = CKHealthRecordsStep(identifier: "HealthRecords")
+//
         //add consent if user dont have consent in cloud
         
         let consentDocument = ConsentDocument()
@@ -59,7 +59,7 @@ struct LoginExistingUserViewController: UIViewControllerRepresentable {
         passcodeStep.text = config.read(query: "Passcode Text")
         
         // create a task with each step
-        loginSteps += [consentReview,reviewConsentStep,healthDataStep, healthRecordsStep, passcodeStep]
+        loginSteps += [consentReview,reviewConsentStep,healthDataStep, passcodeStep]
         
         
         

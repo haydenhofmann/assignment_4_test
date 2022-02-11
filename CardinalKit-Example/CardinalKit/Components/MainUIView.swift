@@ -23,9 +23,13 @@ struct MainUIView: View {
     
     var body: some View {
         TabView {
-            TasksUIView(color: self.color).tabItem {
-                Image("tab_tasks").renderingMode(.template)
-                Text("Tasks")
+//            TasksUIView(color: self.color).tabItem {
+//                Image(systemName: "newspaper").renderingMode(.template)
+//                Text("Instructions")
+//            }
+            IntroductionUIView().tabItem {
+                Image(systemName: "newspaper").renderingMode(.template)
+                Text("Instructions")
             }
             
             if useCareKit && carekitLoaded {

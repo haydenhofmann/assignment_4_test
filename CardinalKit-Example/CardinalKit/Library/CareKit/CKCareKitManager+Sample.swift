@@ -169,44 +169,40 @@ internal extension OCKStore {
                 })
             }
         })
+        
+        //add ResearchKit Survey
+        let thisMorning = Calendar.current.startOfDay(for: Date())
+        let surveyElement = OCKScheduleElement(start: thisMorning, end: nil, interval: DateComponents(day:1))
+        let surveySchedule = OCKSchedule(composing: [surveyElement])
+        var survey = OCKTask(id: "EMASurvey", title: "EMA Survey", carePlanUUID: nil, schedule: surveySchedule)
+        survey.impactsAdherence = true
+        survey.instructions = "Please take this survey."
+
+        addTask(survey, callbackQueue: .main, completion: nil)
+
+        createContacts()
     }
     
     func createContacts() {
-        var contact1 = OCKContact(id: "oliver", givenName: "Oliver",
-                                  familyName: "Aalami", carePlanUUID: nil)
-        contact1.asset = "OliverAalami"
+        var contact1 = OCKContact(id: "sean", givenName: "Sean",
+                                  familyName: "Mackey", carePlanUUID: nil)
+        contact1.asset = "SeanMackey"
         contact1.title = "Vascular Surgeon"
-        contact1.role = "Dr. Aalami is the director of the CardinalKit project."
-        contact1.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "aalami@stanford.edu")]
-        contact1.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
-        contact1.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
+        contact1.role = "Dr. Mackey is the head of the CHOIR study at Stanford."
+        contact1.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "smackey@stanford.edu")]
+        contact1.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(650) 723-6238")]
+        //contact1.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")]
 
         contact1.address = {
             let address = OCKPostalAddress()
-            address.street = "318 Campus Drive"
-            address.city = "Stanford"
+            address.street = "1070 Arastradero Road"
+            address.city = "Palo Alto"
             address.state = "CA"
-            address.postalCode = "94305"
+            address.postalCode = "94304"
             return address
         }()
 
-        var contact2 = OCKContact(id: "johnny", givenName: "Johnny",
-                                  familyName: "Appleseed", carePlanUUID: nil)
-        contact2.asset = "JohnnyAppleseed"
-        contact2.title = "OBGYN"
-        contact2.role = "Dr. Appleseed is an OBGYN with 13 years of experience."
-        contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(324) 555-7415")]
-        contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(324) 555-7415")]
-        contact2.address = {
-            let address = OCKPostalAddress()
-            address.street = "318 Campus Drive"
-            address.city = "Stanford"
-            address.state = "CA"
-            address.postalCode = "94305"
-            return address
-        }()
-
-        addContacts([contact2, contact1])
+        addContacts([contact1])
     }
     
 }
@@ -215,25 +211,25 @@ extension OCKHealthKitPassthroughStore {
 
     internal func populateSampleData() {
 
-        let schedule = OCKSchedule.dailyAtTime(
-            hour: 8, minutes: 0, start: Date(), end: nil, text: nil,
-            duration: .hours(12), targetValues: [OCKOutcomeValue(2000.0, units: "Steps")])
-
-        let steps = OCKHealthKitTask(
-            id: "steps",
-            title: "Daily Steps Goal 🏃🏽‍♂️",
-            carePlanUUID: nil,
-            schedule: schedule,
-            healthKitLinkage: OCKHealthKitLinkage(
-                quantityIdentifier: .stepCount,
-                quantityType: .cumulative,
-                unit: .count()))
-
-        addTasks([steps]) { result in
-            switch result {
-            case .success: print("Added tasks into HealthKitPassthroughStore!")
-            case .failure(let error): print("Error: \(error)")
-            }
-        }
+//        let schedule = OCKSchedule.dailyAtTime(
+//            hour: 8, minutes: 0, start: Date(), end: nil, text: nil,
+//            duration: .hours(12), targetValues: [OCKOutcomeValue(2000.0, units: "Steps")])
+//
+//        let steps = OCKHealthKitTask(
+//            id: "steps",
+//            title: "Daily Steps Goal 🏃🏽‍♂️",
+//            carePlanUUID: nil,
+//            schedule: schedule,
+//            healthKitLinkage: OCKHealthKitLinkage(
+//                quantityIdentifier: .stepCount,
+//                quantityType: .cumulative,
+//                unit: .count()))
+//
+//        addTasks([steps]) { result in
+//            switch result {
+//            case .success: print("Added tasks into HealthKitPassthroughStore!")
+//            case .failure(let error): print("Error: \(error)")
+//            }
+//        }
     }
 }

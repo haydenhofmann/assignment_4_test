@@ -25,10 +25,10 @@ class SurveyItemViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
         }
 
         // 2b. If the user attempted to mark the task complete, display a ResearchKit survey.
-        let answerFormat = ORKAnswerFormat.scale(withMaximumValue: 5, minimumValue: 1, defaultValue: 5, step: 1, vertical: false, maximumValueDescription: "A LOT!", minimumValueDescription: "a little")
-        let feedbackStep = ORKQuestionStep(identifier: "feedback", title: "Feedback", question: "How are you liking CardinalKit?", answer: answerFormat)
-        let surveyTask = ORKOrderedTask(identifier: "feedback", steps: [feedbackStep])
-        let surveyViewController = ORKTaskViewController(task: surveyTask, taskRun: nil)
+//        let answerFormat = ORKAnswerFormat.scale(withMaximumValue: 5, minimumValue: 1, defaultValue: 5, step: 1, vertical: false, maximumValueDescription: "A LOT!", minimumValueDescription: "a little")
+//        let feedbackStep = ORKQuestionStep(identifier: "feedback", title: "Feedback", question: "How are you liking CardinalKit?", answer: answerFormat)
+//        let surveyTask = ORKOrderedTask(identifier: "feedback", steps: [feedbackStep])
+        let surveyViewController = ORKTaskViewController(task: EMASurvey.emaSurvey, taskRun: nil)
         surveyViewController.delegate = self
 
         // 3a. Present the survey to the user
@@ -43,22 +43,31 @@ class SurveyItemViewController: OCKInstructionsTaskViewController, ORKTaskViewCo
             return
         }
         // 4a. Retrieve the result from the ResearchKit survey
-        let survey = taskViewController.result.results!.first(where: { $0.identifier == "feedback" }) as! ORKStepResult
-        let feedbackResult = survey.results!.first as! ORKScaleQuestionResult
+       // let survey = taskViewController.result.results!.first(where: { $0.identifier == "EMASurvey" }) as! ORKStepResult
+        //let feedbackResult = "test" as! ORKTestQuestionResult
         
-        if let ScaleAnswer = feedbackResult.scaleAnswer{
-            // 4b. Save the result into CareKit's store
-            let answer = Int(truncating: ScaleAnswer)
-            controller.appendOutcomeValue(value: answer, at: IndexPath(item: 0, section: 0), completion: nil)
-            // 5. Upload results to GCP, using the CKTaskViewControllerDelegate class.
-            let gcpDelegate = CKUploadToGCPTaskViewControllerDelegate()
-            gcpDelegate.taskViewController(taskViewController, didFinishWith: reason, error: error)
-        }
-        else{
-            taskView.completionButton.isSelected = false
-            let gcpDelegate = CKUploadToGCPTaskViewControllerDelegate()
-            gcpDelegate.taskViewController(taskViewController, didFinishWith: .discarded, error: error)
-        }
+        
+        let answer = "1"
+        controller.appendOutcomeValue(value: answer, at: IndexPath(item: 0, section: 0), completion: nil)
+        
+        let gcpDelegate = CKUploadToGCPTaskViewControllerDelegate()
+        gcpDelegate.taskViewController(taskViewController, didFinishWith: reason, error: error)
+        
+        
+//
+//        if let ScaleAnswer = feedbackResult.scaleAnswer{
+//            // 4b. Save the result into CareKit's store
+//            let answer = Int(truncating: ScaleAnswer)
+//            controller.appendOutcomeValue(value: answer, at: IndexPath(item: 0, section: 0), completion: nil)
+//            // 5. Upload results to GCP, using the CKTaskViewControllerDelegate class.
+//            let gcpDelegate = CKUploadToGCPTaskViewControllerDelegate()
+//            gcpDelegate.taskViewController(taskViewController, didFinishWith: reason, error: error)
+//        }
+//        else{
+//            taskView.completionButton.isSelected = false
+//            let gcpDelegate = CKUploadToGCPTaskViewControllerDelegate()
+//            gcpDelegate.taskViewController(taskViewController, didFinishWith: .discarded, error: error)
+//        }
     }
 }
 
@@ -75,13 +84,16 @@ class SurveyItemViewSynchronizer: OCKInstructionsTaskViewSynchronizer {
         super.updateView(view, context: context)
 
         // Check if an answer exists or not and set the detail label accordingly
-        let element: [OCKAnyEvent]? = context.viewModel.first
-        let firstEvent = element?.first
         
-        if let answer = firstEvent?.outcome?.values.first?.integerValue {
-            view.headerView.detailLabel.text = "CardinalKit Rating: \(answer)"
-        } else {
-            view.headerView.detailLabel.text = "How are you liking CardinalKit?"
-        }
+        //MIGHT NEED TO RE RUN THIS
+        
+//        let element: [OCKAnyEvent]? = context.viewModel.first
+//        let firstEvent = element?.first
+
+//        if let answer = firstEvent?.outcome?.values.first?.integerValue {
+//            view.headerView.detailLabel.text = "Pain Scale: \(answer)"
+//        } else {
+            view.headerView.detailLabel.text = "Daily pain survey"
+//        }
     }
 }

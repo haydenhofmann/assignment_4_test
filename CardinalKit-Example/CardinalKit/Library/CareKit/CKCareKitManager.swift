@@ -34,7 +34,7 @@ class CKCareKitManager: NSObject {
         let lastUpdateDate:Date? = UserDefaults.standard.object(forKey: Constants.prefCareKitCoreDataInitDate) as? Date
 //        if forceUpdate || UserDefaults.standard.object(forKey: Constants.prefCareKitCoreDataInitDate) == nil {
 //        coreDataStore.populateSampleData(lastUpdateDate:lastUpdateDate)
-        healthKitStore.populateSampleData()            
+        healthKitStore.populateSampleData()
         UserDefaults.standard.set(Date(), forKey: Constants.prefCareKitCoreDataInitDate)
 //        }
     }
