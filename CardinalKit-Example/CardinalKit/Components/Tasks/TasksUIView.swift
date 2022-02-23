@@ -71,6 +71,7 @@ struct TasksUIView: View {
     }
     
     var body: some View {
+    
         VStack {
             Text(config.read(query: "Study Title"))
                 .font(.system(size: 25, weight:.bold))
@@ -109,6 +110,7 @@ struct TasksUIView: View {
             }
         })
     }
+    
 }
 
 struct TasksUIView_Previews: PreviewProvider {

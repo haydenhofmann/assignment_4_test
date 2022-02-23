@@ -64,6 +64,7 @@ struct MainUIView: View {
             
             
         })
+       .onAppear { UIApplication.shared.applicationIconBadgeNumber = 0 }
     }
 }
 

@@ -11,15 +11,15 @@ import SwiftUI
 struct IntroductionUIView: View {
     var body: some View {
         ZStack {
-                Image("resized_blue")
+                Image("Green_Background")
                     .resizable()
                     .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
+                    .ignoresSafeArea()
         VStack {
             Spacer()
             Image("CHOIR_LOGO")
             //Spacer()
-            Text("Instructions").font(.title.bold()).foregroundColor(Color("Cardinal"))
+            Text("Welcome to CHOIR Mobile!").font(.title.bold()).foregroundColor(Color("Cardinal"))
             Text("Each day you will be notified to take 3 surveys each taking less than 5 minutes to complete. You can view these surveys in the schedule tab below.").font(.body).padding().multilineTextAlignment(.center)
             Spacer()
             

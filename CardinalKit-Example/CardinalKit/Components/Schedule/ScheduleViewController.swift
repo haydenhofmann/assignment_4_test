@@ -58,6 +58,28 @@ class ScheduleViewController: OCKDailyPageViewController {
                     
                     
                 }
+                if let surveyTask = tasks.first(where: { $0.id == "EMASurvey"}) {
+                    let surveyCard = SurveyItemViewController(
+                        viewSynchronizer: SurveyItemViewSynchronizer(),
+                        task: surveyTask,
+                        eventQuery: .init(for: date),
+                        storeManager: self.storeManager)
+                    
+                    listViewController.appendViewController(surveyCard, animated: false)
+                    
+                    
+                }
+                if let surveyTask = tasks.first(where: { $0.id == "EMASurvey"}) {
+                    let surveyCard = SurveyItemViewController(
+                        viewSynchronizer: SurveyItemViewSynchronizer(),
+                        task: surveyTask,
+                        eventQuery: .init(for: date),
+                        storeManager: self.storeManager)
+                    
+                    listViewController.appendViewController(surveyCard, animated: false)
+                    
+                    
+                }
                 
                 
 

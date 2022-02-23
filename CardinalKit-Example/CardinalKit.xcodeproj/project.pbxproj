@@ -85,6 +85,8 @@
 		B63F5A2E30CCD29C447E5751 /* Pods_CardinalKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE674FD6381CB29A0044DFD /* Pods_CardinalKit_Example.framework */; };
 		D253D132250D1BDB00A363E4 /* CKSignInWithAppleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */; };
 		DF3AB75F27AB530C00BE7F0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF3AB75E27AB530C00BE7F0A /* GoogleService-Info.plist */; };
+		DFB9E18927BD871000C30F48 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9E18827BD871000C30F48 /* NotificationManager.swift */; };
+		DFB9E18B27BDAFF900C30F48 /* CKNotificationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9E18A27BDAFF900C30F48 /* CKNotificationStep.swift */; };
 		DFE792FD27B4747E00E8E71A /* IntroductionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE792FC27B4747E00E8E71A /* IntroductionUIView.swift */; };
 		DFE7930127B47DAB00E8E71A /* PainSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE7930027B47DAB00E8E71A /* PainSurvey.swift */; };
 		E235077724F7082700CC1899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235077624F7082700CC1899 /* SceneDelegate.swift */; };
@@ -193,6 +195,8 @@
 		B35D8AC83F27C42500216B27 /* Pods-CardinalKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Example/Pods-CardinalKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKSignInWithAppleStep.swift; sourceTree = "<group>"; };
 		DF3AB75E27AB530C00BE7F0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DFB9E18827BD871000C30F48 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		DFB9E18A27BDAFF900C30F48 /* CKNotificationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKNotificationStep.swift; sourceTree = "<group>"; };
 		DFE792FC27B4747E00E8E71A /* IntroductionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionUIView.swift; sourceTree = "<group>"; };
 		DFE7930027B47DAB00E8E71A /* PainSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainSurvey.swift; sourceTree = "<group>"; };
 		E235077624F7082700CC1899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -348,6 +352,7 @@
 			children = (
 				8E0A43A0244A4A0400656518 /* Views */,
 				D253D131250D1BDB00A363E4 /* CKSignInWithAppleStep.swift */,
+				DFB9E18A27BDAFF900C30F48 /* CKNotificationStep.swift */,
 				8E0A439D244A4A0400656518 /* CKHealthDataStepViewController.swift */,
 				8EA6648625930B6B00B6A45A /* CKHealthRecordsStepViewController.swift */,
 				8E0A439F244A4A0400656518 /* PasswordlessLoginStep.swift */,
@@ -425,6 +430,7 @@
 				8E9CDEB02591737A00C8A228 /* Views */,
 				8E9CDEA625916B2800C8A228 /* ScheduleViewControllerRepresentable.swift */,
 				8E9CDEA825916E6600C8A228 /* ScheduleViewController.swift */,
+				DFB9E18827BD871000C30F48 /* NotificationManager.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 				8E6E1E2E25353A1E0024B8DF /* PatientIDView.swift in Sources */,
 				8E6E1E0B2534FF640024B8DF /* OnboardingViewController+Coordinator.swift in Sources */,
 				8E40DC042471E5940027536B /* CKNetworkManager.swift in Sources */,
+				DFB9E18B27BDAFF900C30F48 /* CKNotificationStep.swift in Sources */,
 				8EA664B025941A4D00B6A45A /* SurveyItemViewController.swift in Sources */,
 				8E9CDEBA2591843200C8A228 /* CKConfig.swift in Sources */,
 				2F94C5F22536543600DF8866 /* SceneDelegate+CardinalKit.swift in Sources */,
@@ -759,6 +766,7 @@
 				8E6E1E26253537E40024B8DF /* TasksUIView.swift in Sources */,
 				8E9CDEAD259170AD00C8A228 /* CKCareKitManager.swift in Sources */,
 				8EA664892593213000B6A45A /* CKSendHelper.swift in Sources */,
+				DFB9E18927BD871000C30F48 /* NotificationManager.swift in Sources */,
 				8E6E1E3425353AFE0024B8DF /* EmailHelper.swift in Sources */,
 				8E6E1E24253537580024B8DF /* MainUIView.swift in Sources */,
 				8E6E1E182535263F0024B8DF /* CKTaskViewController.swift in Sources */,

@@ -187,7 +187,7 @@ internal extension OCKStore {
         var contact1 = OCKContact(id: "sean", givenName: "Sean",
                                   familyName: "Mackey", carePlanUUID: nil)
         contact1.asset = "SeanMackey"
-        contact1.title = "Vascular Surgeon"
+        contact1.title = "Chief of the Division of Stanford Pain Medicine"
         contact1.role = "Dr. Mackey is the head of the CHOIR study at Stanford."
         contact1.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "smackey@stanford.edu")]
         contact1.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(650) 723-6238")]

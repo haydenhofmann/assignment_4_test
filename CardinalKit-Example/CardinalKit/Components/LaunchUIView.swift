@@ -21,6 +21,11 @@ struct LaunchUIView: View {
     }
 
     var body: some View {
+        ZStack {
+                Image("Green_Background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
         VStack(spacing: 10) {
             if didCompleteOnboarding && (CKStudyUser.shared.currentUser != nil){
                 MainUIView()
@@ -42,6 +47,7 @@ struct LaunchUIView: View {
             } else if let completed = UserDefaults.standard.object(forKey: Constants.onboardingDidComplete) as? Bool {
                self.didCompleteOnboarding = completed
             }
+        }
         }
         
     }

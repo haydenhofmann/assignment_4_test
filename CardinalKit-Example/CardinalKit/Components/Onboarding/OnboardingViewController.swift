@@ -47,6 +47,10 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         // see `HealthDataStep` to configure!
         let healthDataStep = CKHealthDataStep(identifier: "Healthkit")
         
+        
+        
+        let notificationStep = CKNotificationStep(identifier: "Notification")
+        
         /* **************************************************************
         *  STEP (3.5): get permission to collect HealthKit health records data
         **************************************************************/
@@ -110,7 +114,7 @@ struct OnboardingViewController: UIViewControllerRepresentable {
         let introSteps: [ORKStep] = [consentStep, reviewConsentStep]
         
         // and steps regarding login / security
-        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, completionStep]
+        let emailVerificationSteps = loginSteps + [passcodeStep, healthDataStep, notificationStep, completionStep]
         
         // guide the user through ALL steps
         let fullSteps = introSteps + emailVerificationSteps
