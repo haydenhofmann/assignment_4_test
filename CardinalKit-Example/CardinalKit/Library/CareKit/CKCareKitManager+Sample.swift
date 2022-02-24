@@ -176,9 +176,33 @@ internal extension OCKStore {
         let surveySchedule = OCKSchedule(composing: [surveyElement])
         var survey = OCKTask(id: "EMASurvey", title: "EMA Survey", carePlanUUID: nil, schedule: surveySchedule)
         survey.impactsAdherence = true
-        survey.instructions = "Please take this survey."
+        survey.instructions = "Please take this survey in the morning."
 
         addTask(survey, callbackQueue: .main, completion: nil)
+        
+        
+        
+        //add second
+        let thisAfternoon = Calendar.current.startOfDay(for: Date())
+        let surveyElement2 = OCKScheduleElement(start: thisAfternoon, end: nil, interval: DateComponents(day:1))
+        let surveySchedule2 = OCKSchedule(composing: [surveyElement2])
+        var survey2 = OCKTask(id: "EMASurvey2", title: "EMA Survey", carePlanUUID: nil, schedule: surveySchedule2)
+        survey2.impactsAdherence = true
+        survey2.instructions = "Please take this survey in the afternoon"
+
+        addTask(survey2, callbackQueue: .main, completion: nil)
+        
+        
+        //add third
+        let thisEvening = Calendar.current.startOfDay(for: Date())
+        let surveyElement3 = OCKScheduleElement(start: thisEvening, end: nil, interval: DateComponents(day:1))
+        let surveySchedule3 = OCKSchedule(composing: [surveyElement3])
+        var survey3 = OCKTask(id: "EMASurvey3", title: "EMA Survey", carePlanUUID: nil, schedule: surveySchedule3)
+        survey3.impactsAdherence = true
+        survey3.instructions = "Please take this survey in the evening."
+
+        addTask(survey3, callbackQueue: .main, completion: nil)
+        
 
         createContacts()
     }
@@ -203,6 +227,17 @@ internal extension OCKStore {
         }()
 
         addContacts([contact1])
+        
+        var contact2 = OCKContact(id: "corrine", givenName: "Corrine",
+                                  familyName: "Jung", carePlanUUID: nil)
+        contact2.asset = "CorrineJung"
+        contact2.title = "Division Research Manager"
+        contact2.role = "Please feel free to email Dr. Jung with any questions regarding this study."
+        contact2.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "cejung@stanford.edu")]
+   
+        //contact1.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(111) 111-1111")
+
+        addContacts([contact2])
     }
     
 }

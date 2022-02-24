@@ -22,7 +22,7 @@ class ScheduleViewController: OCKDailyPageViewController {
         
         //let identifiers = ["doxylamine", "nausea", "coffee", "survey", "steps", "heartRate", "surveys"]
         //let identifiers = ["painSurvey"]
-        let identifiers = ["EMASurvey"]
+        let identifiers = ["EMASurvey", "EMASurvey2","EMASurvey3"]
         var query = OCKTaskQuery(for: date)
         query.ids = identifiers
         query.excludesTasksWithNoEvents = true
@@ -58,7 +58,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                     
                     
                 }
-                if let surveyTask = tasks.first(where: { $0.id == "EMASurvey"}) {
+                if let surveyTask = tasks.first(where: { $0.id == "EMASurvey2"}) {
                     let surveyCard = SurveyItemViewController(
                         viewSynchronizer: SurveyItemViewSynchronizer(),
                         task: surveyTask,
@@ -69,7 +69,7 @@ class ScheduleViewController: OCKDailyPageViewController {
                     
                     
                 }
-                if let surveyTask = tasks.first(where: { $0.id == "EMASurvey"}) {
+                if let surveyTask = tasks.first(where: { $0.id == "EMASurvey3"}) {
                     let surveyCard = SurveyItemViewController(
                         viewSynchronizer: SurveyItemViewSynchronizer(),
                         task: surveyTask,
