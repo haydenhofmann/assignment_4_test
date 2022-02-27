@@ -34,7 +34,7 @@ struct EMASurvey {
         let sleepTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: sleepTextChoices)
         
         let sleepHourAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
-        sleepHourAnswerFormat.multipleLines = false
+        sleepHourAnswerFormat.multipleLines = true
         
         let sleepFormItem = ORKFormItem(identifier: "SleepFormItem1", text: "Overall, how was the quality of your sleep last night:", answerFormat: sleepTextChoiceAnswerFormat)
         let sleepFormItem2 = ORKFormItem(identifier: "SleepFormItem2", text: "How many hours did you sleep last night (input number of hours): ", answerFormat: sleepHourAnswerFormat)
@@ -154,7 +154,7 @@ struct EMASurvey {
         
         // Q1: FRQ for specific time pain (duration + intensity)
         let specificFRQAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
-        specificFRQAnswerFormat.multipleLines = false
+        specificFRQAnswerFormat.multipleLines = true
         
         let specificFormItem1 = ORKFormItem(identifier: "SpecificFormItem1", text: "How long did it last (minutes)?", answerFormat: specificFRQAnswerFormat)
         let specificFormItem2 = ORKFormItem(identifier: "SpecificFormItem2", text: "How was the overall intensity of your pain during the last 2 hours on a scale of 0 to 10 (0 means not at all intense and 10 means extremely intense).", answerFormat: specificFRQAnswerFormat)
@@ -178,7 +178,7 @@ struct EMASurvey {
         let constantPainBooleanAnswer = ORKBooleanAnswerFormat(yesString: "Yes", noString: "No")
         
         let constantFRQAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
-        constantFRQAnswerFormat.multipleLines = false
+        constantFRQAnswerFormat.multipleLines = true
         
         let constantTextChoices = [
             ORKTextChoice(text: "Constant throughout the 2-hour period.", value: 0 as NSCoding & NSCopying & NSObjectProtocol),
